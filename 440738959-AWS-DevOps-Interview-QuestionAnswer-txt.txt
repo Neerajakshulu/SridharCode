@@ -1,0 +1,561 @@
+Hi Team,
+
+#Today's #uploaded #Real #Time
+#AWS #DEVOPS #INTERVIEW #QUESTIONS #ANSWERS
+Question 1. What Is Amazon Web Services In Devops?
+Answer :
+AWS provides services that help you practice DevOps at your company and that are
+built first for use with AWS. These tools automate manual tasks, help teams manage
+complex environments at scale, and keep engineers in control of the high velocity
+that is enabled by DevOps.
+
+Question 2. What Is The Role Of A Devops Engineer?
+Answer :
+
+There�s no formal career track for becoming a DevOps engineer. They are either
+developers who get interested in deployment and network operations, or sysadmin who
+have a passion for scripting and coding, and move into the development side where
+they can improve the planning of test and deployment.
+
+Question 3. What Is Devops With Cloud Computing?
+
+Answer :
+
+Inseparable development and operations practices are universally relevant. Cloud
+computing, agile development, and DevOps are interlocking parts of a strategy for
+transforming IT into a business adaptability enabler. If cloud is an instrument,
+then DevOps is the musician that plays it.
+
+
+Question 4. Why Do We Use Aws For Devops?
+
+Answer :
+
+There are many benefits of using AWS for DevOps, thery are:
+
+Get Started Fast � Each AWS service is ready to use if you have an AWS account.
+There is no setup required or software to install.
+Fully Managed Services � These services can help you take advantage of AWS
+resources quicker. You can worry less about setting up, installing, and operating
+infrastructure on your own. This lets you focus on your core product.
+Built for Scale � You can manage a single instance or scale to thousands using AWS
+services. These services help you make the most of flexible compute resources by
+simplifying provisioning, configuration, and scaling.
+Programmable � You have the option to use each service via the AWS Command Line
+Interface or through APIs and SDKs. You can also model and provision AWS resources
+and your entire AWS infrastructure using declarative AWS Cloud Formation templates.
+Automation � AWS helps you use automation so you can build faster and more
+efficiently. Using AWS services, you can automate manual tasks or processes such as
+deployments, development & test workflows, container management, and configuration
+management.
+Secure � Use AWS Identity and Access Management (IAM) to set user permissions and
+policies. This gives you granular control over who can access your resources and
+how they access those resources.
+Large Partner Ecosystem � AWS supports a large ecosystem of partners which
+integrate with and extend AWS services. Use your preferred third-party and open
+source tools with AWS to build an end-to-end solution.
+Pay-As-You-Go � With AWS purchase services as you need them and only for the period
+when you plan to use them. AWS pricing has no upfront fees, termination penalties,
+or long term contracts. The AWS Free Tier helps you get started with AWS.
+Question 5. What Is Devops Tooling By Aws?
+
+Answer :
+
+AWS provides services that help you practice DevOps at your company and that are
+built first for use with AWS. These tools automate manual tasks, help teams manage
+complex environments at scale, and keep engineers in control of the high velocity
+that is enabled by DevOps.
+
+Question 6. How Do You Handle Continuous Integration And Continuous Delivery In Aws
+Devops?
+
+Answer :
+
+The AWS Developer Tools help you securely store and version your application�s
+source code and automatically build, test, and deploy your application to AWS or
+your on-premises environment.
+
+Start with AWS Code Pipeline to build a continuous integration or continuous
+delivery workflow that uses AWS Code Build, AWS Code Deploy, and other tools, or
+use each service separately.
+
+
+Question 7. What Is Aws Code Pipeline In Aws Devops?
+
+Answer :
+
+AWS Code Pipeline is a continuous integration and continuous delivery service for
+fast and reliable application and infrastructure updates. Code Pipeline builds,
+tests, and deploys your code every time there is a code change, based on the
+release process models you define. This enables you to rapidly and reliably deliver
+features and updates.
+
+Question 8. What Is Aws Code Build In Aws Devops?
+
+Answer :
+
+AWS Code Build is a fully managed build service that compiles source code, runs
+tests, and produces software packages that are ready to deploy. With Code Build,
+you don�t need to provision, manage, and scale your own build servers. Code Build
+scales continuously and processes multiple builds concurrently, so your builds are
+not left waiting in a queue.
+
+Question 9. What Is Aws Code Deploy In Aws Devops?
+
+Answer :
+
+AWS Code Deploy automates code deployments to any instance, including Amazon EC2
+instances and on-premises servers. AWS Code Deploy makes it easier for you to
+rapidly release new features, helps you avoid downtime during application
+deployment, and handles the complexity of updating your applications.
+
+
+Question 10. What Is Aws Code Star In Aws Devops?
+
+Answer :
+
+AWS Code Star enables you to quickly develop, build, and deploy applications on
+AWS. AWS Code Star provides a unified user interface, enabling you to easily manage
+your software development activities in one place. With AWS Code Star, you can set
+up your entire continuous delivery tool chain in minutes, allowing you to start
+releasing code faster.
+
+Question 11. How Instacart Uses Aws Devops?
+
+Answer :
+
+Instacart uses AWS Code Deploy to automate deployments for all of its front-end and
+back-end services. Using AWS Code Deploy has enabled Instacart developers to focus
+on their product and worry less about deployment operations.
+
+Question 12. How Lulu Lemon Athletic Uses Aws Devops?
+
+Answer :
+
+Lulu lemon athletic uses a variety of AWS services to engineer a fully automated,
+continuous integration and delivery system. Lulu lemon deploys artifacts
+distributed via Amazon S3 using AWS Code Pipeline. From this stage, the artifacts
+are deployed to AWS Elastic Beanstalk.
+
+
+Question 13. What Is Amazon Elastic Container Service In Aws Devops?
+
+Answer :
+
+Amazon Elastic Container Service (ECS) is a highly scalable, high performance
+container management service that supports Docker containers and allows you to
+easily run applications on a managed cluster of Amazon EC2 instances.
+
+Question 14. What Is Aws Lambda In Aws Devops?
+
+Answer :
+
+AWS Lambda lets you run code without provisioning or managing servers. With Lambda,
+you can run code for virtually any type of application or backend service � all
+with zero administration. Just upload your code and Lambda takes care of everything
+required to run and scale your code with high availability.
+
+Question 15. What Are Aws Developer Tools?
+
+Answer :
+
+The AWS Developer Tools is a set of services designed to enable developers and IT
+operations professionals practicing DevOps to rapidly and safely deliver software.
+
+Together, these services help you securely store and version control your
+application�s source code and automatically build, test, and deploy your
+application to AWS or your on-premises environment. You can use AWS Code Pipeline
+to orchestrate an end-to-end software release workflow using these services and
+third-party tools or integrate each service independently with your existing tools.
+
+
+Question 16. What Is Code Commit In Aws Devops?
+
+Answer :
+
+AWS Code Commit is a fully-managed source control service that makes it easy for
+companies to host secure and highly scalable private Git repositories. Code Commit
+eliminates the need to operate your own source control system or worry about
+scaling its infrastructure. You can use Code Commit to securely store anything from
+source code to binaries, and it works seamlessly with your existing Git tools.
+
+Question 17. What Are The Benefits Of Aws Code Build In Aws Devops?
+
+Answer :
+
+AWS Code Build is a fully managed build service that compiles source code, runs
+tests, and produces software packages that are ready to deploy. With Code Build,
+you don�t need to provision, manage, and scale your own build servers.
+
+Code Build scales continuously and processes multiple builds concurrently, so your
+builds are not left waiting in a queue. You can get started quickly by using
+prepackaged build environments, or you can create custom build environments that
+use your own build tools. With Code Build, you are charged by the minute for the
+computer resources you use.
+
+AWS Code Build Benefits:
+
+Fully Managed Build Service � AWS Code Build eliminates the need to set up, patch,
+update, and manage your own build servers and software. There is no software to
+install or manage.
+Continuous Scaling � AWS Code Build scales automatically to meet your build volume.
+It immediately processes each build you submit and can run separate builds
+concurrently, which means your builds are not left waiting in a queue.
+Pay as You Go � With AWS Code Build, you are charged based on the number of minutes
+it takes to complete your build.
+Extensible � You can bring your own build tools and programming runtimes to use
+with AWS Code Build by creating customized build environments in addition to the
+prepackaged build tools and runtimes supported by Code Build.
+Enables Continuous Integration and Delivery � AWS Code Build belongs to a family of
+AWS Code Services, which you can use to create complete, automated software release
+workflows for continuous integration and delivery (CI/CD). You can also integrate
+Code Build into your existing CI/CD workflow.
+Secure � With AWS Code Build, your build artifacts are encrypted with customer-
+specific keys that are managed by the AWS Key Management Service (KMS). Code Build
+is integrated with AWS Identity and Access Management (IAM), so you can assign
+user-specific permissions to your build projects.
+Question 18. What Is Amazon Ec2 In Aws Devops?
+
+Answer :
+
+Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure,
+resizable compute capacity in the cloud. It is designed to make web-scale cloud
+computing easier for developers.
+
+Question 19. What Is Amazon S3 In Aws Devops?
+
+Answer :
+
+Amazon Simple Storage Service (Amazon S3) is object storage with a simple web
+service interface to store and retrieve any amount of data from anywhere on the
+web.
+
+Question 20. What Is Amazon Rds In Aws Devops?
+
+Answer :
+Amazon Relational Database Service (Amazon RDS) makes it easy to set up, operate,
+and scale a relational database in the cloud.
+
+Question 21. What Is Amazon Quick Sight In Aws Devops?
+
+Answer :
+
+Amazon Quick Sight is a fast, cloud-powered business analytics service that makes
+it easy to build visualizations, perform ad-hoc analysis, and quickly get business
+insights from your data.
+
+Question 22. What Is Aws Iot In Aws Devops?
+
+Answer :
+
+AWS IoT is a managed cloud platform that lets connected devices easily and securely
+interact with cloud applications and other devices.
+
+Question 23. What Are The Benefits Of Aws Code Deploy In Aws Devops?
+
+Answer :
+
+AWS Code Deploy is a service that automates software deployments to a variety of
+computer services including Amazon EC2, AWS Lambda, and instances running on-
+premises.
+
+AWS Code Deploy makes it easier for you to rapidly release new features, helps you
+avoid downtime during application deployment, and handles the complexity of
+updating your applications.
+
+AWS Code Deploy Benefits:
+
+Automated Deployments � AWS Code Deploy fully automates your software deployments,
+allowing you to deploy reliably and rapidly. You can consistently deploy your
+application across your development, test, and production environments whether
+deploying to Amazon EC2, AWS Lambda, or instances running on-premises. The service
+scales with your infrastructure so you can deploy to one Lambda function or
+thousands of EC2 instances.
+Minimize Downtime � AWS Code Deploy helps maximize your application availability
+during the software deployment process. It introduces changes incrementally and
+tracks application health according to configurable rules. Software deployments can
+easily be stopped and rolled back if there are errors.
+Centralized Control � AWS Code Deploy allows you to easily launch and track the
+status of your application deployments through the AWS Management Console or the
+AWS CLI. Code Deploy gives you a detailed report allowing you to view when and to
+where each application revision was deployed.
+Easy To Adopt � AWS Code Deploy is platform and language agnostic, works with any
+application, and provides the same experience whether you�re deploying to Amazon
+EC2 or AWS Lambda. You can easily reuse your existing setup code. Code Deploy can
+also integrate with your existing software release process or continuous delivery
+tool chain (e.g., AWS Code Pipeline, GitHub, and Jenkins).
+Question 24. What Is Vpc?
+
+Answer :
+
+A virtual private cloud (VPC) is a virtual network dedicated to your AWS account.
+You can configure or create your VPC as per requirement like select region, create
+subnets (IP- CIDR), configure route tables, security groups, Internet gateway etc
+to your AWS account By which you can launch your AWS resources, such as Amazon EC2,
+RDS instances etc, into your VPC.
+
+So basically you can say that Amazon VPC is the networking layer for AWS
+Infrastructure.
+
+Question 25. What Is Vpc Peering?
+
+Answer :
+
+A VPC peering connection is a networking connection between two VPCs that enables
+you to route traffic between them using private IP addresses. And instances which
+are in VPC can communicate with each other as if they are within the same network.
+You can create a VPC peering connection between your own VPCs, or with a VPC in
+another AWS account within a single region.
+If you have more than one AWS account within a same region and wants to share or
+transfer the data, you can peer the VPCs across those accounts to create a file
+sharing network. You can also use a VPC peering connection to allow other VPCs to
+access resources you have in one of your VPCs.
+A VPC peering connection can help you to facilitate the transfer of data.
+Question 26. What Is Vpc Endpoints?
+
+Answer :
+
+A VPC endpoint enables you to create a private connection between your VPC with
+another AWS service without requiring access over the Internet, through a NAT
+device, a VPN connection, or AWS Direct Connect. They are horizontally scaled,
+redundant, and highly available VPC components that allow communication between
+instances in your VPC and AWS services without imposing availability risks or
+bandwidth constraints on your network traffic.
+
+An endpoint enables instances in your VPC to use their private IP addresses to
+communicate with resources in other services. Don�t require public IP addresses to
+your instances, and you don�t need an Internet gateway, a NAT device, or a virtual
+private gateway in your VPC.
+
+Question 27. What Is Ebs (elastic Block Storage)?
+
+Answer :
+
+EBS is a virtualized SAN or storage area network. Elastic Block Store (Amazon EBS)
+provides persistence block level storage volumes for use with EC2 instances. EBS
+volumes are highly available and reliable storage volumes that can be attached to
+any running instance that is in the same Availability Zone.
+
+Question 28. What Is S3? What Is It Used For? Should Encryption Be Used In S3?
+
+Answer :
+
+Amazon S3 is stand for Simple storage service that is storage for the Internet. It
+as a, �simple storage service that offers software developers a highly-scalable,
+reliable, and low-latency data storage infrastructure at very low costs�.
+Amazon S3 provides a simple web service interface which you can use to store and
+retrieve any amount of data, at any time, from anywhere on the web. Using this web
+service, developers can easily build applications that make use of Internet
+storage.
+You can think of it like ftp storage, where you can move files to and from there,
+but not mount it like a file system. AWS automatically puts your snapshots there,
+as well as AMIs there. Encryption should be considered for sensitive data, as S3 is
+a proprietary technology developed by Amazon themselves, and as yet unproven vis-a-
+vis a security standpoint.
+Encryption should be considered for sensitive data, as S3 is a proprietary
+technology developed by Amazon themselves, and yet to be proven from a security
+standpoint.
+Question 29. What Is An Ami?
+
+Answer :
+
+AMI stands for Amazon Machine Image. It is effectively a snapshot of the root
+filesystem. AWS AMI provides the information required to launch an instance, which
+is a virtual server in the cloud. You specify an AMI when you launch an instance,
+and you can launch as many instances from the AMI as you need. You can also launch
+instances from as many different AMIs as you need.
+
+An AMI includes the following:
+
+A template for the root volume for the instance (such as an operating system, an
+application server, and applications).
+Launch permissions that control which AWS accounts can use the AMI to launch
+instances.
+A block device mapping that specifies the volumes to attach to the instance when
+it�s launched.
+Build a new AMI by first spinning up and instance from a trusted AMI. Then adding
+packages and components as required. Be wary of putting sensitive data onto an AMI.
+For instance your access credentials should be added to an instance after spin up.
+With a database, mount an outside volume that holds your Mysql data after spin up
+as well.
+
+Question 30. What Is The Relation Between Instance And Ami?
+
+Answer :
+
+An Amazon Machine Image (AMI) is a template that contains a software configuration
+(for example, an operating system, an application server, and applications). From
+an AMI, you launch an instance, which is a copy of the AMI running as a virtual
+server in the cloud.
+
+You can launch different types of instances from a single AMI. An instance type
+determines the hardware of the host computer used for your instance. Each instance
+type offers different compute and memory capabilities.
+
+Question 31. What Automation Tools Can You Use To Spin Up Servers?
+
+Answer :
+
+Here below many types tools given any of the following tools can be used:
+
+Roll-your-own scripts, and use the AWS API tools. Such scripts could be written in
+bash, Perl or other language or your choice.
+Use a configuration management and provisioning tool like Ansible, puppet or its
+successor Opscode Chef Etc.
+You might also look towards a tool like Scalr. Lastly you can go with a managed
+solution such as Right scale.
+Question 32. What Are The Different Deployment Models For Cloud?
+
+Answer :
+
+The different models are:
+Private Cloud
+Public Cloud
+Hybrid Clouds
+Question 33. What Is Auto-scaling? How Does It Work?
+
+Answer :
+
+Horizontally Scaling
+Vertically Scaling
+Auto scaling is a feature of AWS which allows you to configure and automatically
+provision and spin up new instances without the need for your intervention. You can
+do this by setting thresholds and metrics to monitor. When those thresholds are
+crossed, a new instance of your choosing will be spun up, configured, and rolled
+into the load balancer pool. You�ve scaled horizontally without any operator
+intervention!
+
+Vertically Scaling: This is an incredible feature of AWS and cloud virtualization.
+Spin up a new larger instance than the one you are currently running. Pause that
+instance and detach the root ebs volume from this server and discard. Then stop
+your live instance, detach its root volume. Note the unique device ID and attach
+that root volume to your new server. And the start it again. You have scaled
+vertically in-place!!
+
+Question 34. What Is The Difference Between Scalability And Elasticity?
+
+Answer :
+
+Scalability is the ability of a system to increase the workload on its current
+hardware resources to handle variability in demand.
+
+Elasticity is the ability of a system to increase the workload on its current and
+additional hardware resources, thereby enabling businesses to meet demand without
+investing in infrastructure up-front.
+
+Question 35. List Out Different Layers Which Define Cloud Architecture?
+
+Answer :
+
+There are five layers:
+
+Cloud Controller (CLC)
+Walrus
+Cluster Controller
+Storage Controller (SC)
+Node Controller (NC)
+Question 36. What Are The Security Laws Which Are Implemented To Secure Data In A
+Cloud?
+
+Answer :
+
+The security laws which are implemented to secure data in cloud are:
+
+Processing
+File
+Output reconciliation
+Input Validation
+Security and Backup
+Question 37. Why Api�s Have In Cloud Services?
+Answer :
+
+Application Programming Interface (API) has the following uses:
+
+It eliminates the need to write fully fledged programs.
+It provides the instructions to set up communication between one or more
+applications.
+It allows easy creation of applications and links the cloud services with other
+systems.
+Question 38. How Many Data Centers Are Deployed For Cloud Computing? What Are They?
+
+Answer :
+
+There are two data centers in cloud computing:
+
+Containerized Data centers
+Low Density Data centers
+Question 39. What Is The Security For Amazon Ec2?
+
+Answer :
+
+There are several best practices for secure Amazon EC2. A few of them are given
+below:
+
+Use AWS Identity and Access Management (IAM) to control access to your AWS
+resources.
+Restrict access by only allowing trusted hosts or networks to access ports on your
+instance.
+Review the rules in your security groups regularly, and ensure that you apply the
+principle of least
+Privilege � only open up permissions that you require.
+Disable password-based logins for instances launched from your AMI. Passwords can
+be found or cracked, and are a security risk.
+Question 40. How Is Buffer Used In Amazon Web Services?
+
+Answer :
+
+Buffer is used to make the system more resilient to burst of traffic or load by
+synchronizing different components. The components always receive and process the
+requests in an unbalanced way. Buffer keeps the balance between different
+components and makes them work at the same speed to provide faster services.
+
+Question 41. What Is The Function Of Amazon Elastic Compute Cloud?
+
+Answer :
+
+Amazon Elastic compute cloud also known as Amazon EC2 is an Amazon web service that
+provides scalable resources and makes the computing easier for developers.
+
+The main functions of Amazon EC2 are:
+
+It provides easy configurable options and allow user to configure the capacity.
+It provides the complete control of computing resources and let the user run the
+computing environment according to his requirements.
+It provides a fast way to run the instances and quickly book the system hence
+reducing the overall time.
+It provides scalability to the resources and changes its environment according to
+the requirement of the user.
+It provides varieties of tools to the developers to build failure resilient
+applications.
+Question 42. What Are The Different Components Used In Aws?
+
+Answer :
+
+The components that are used in AWS are:
+
+Amazon S3: it is used to retrieve input data sets that are involved in making cloud
+architecture and also used to store the output data sets that is the result of the
+input.
+Amazon SQS: it is used for buffering requests that is received by the controller of
+the Amazon. It is the component that is used for communication between different
+controllers.
+Amazon Simple DB: it is used to store intermediate status log and the tasks that
+are performed by the user/
+Amazon EC2: it is used to run a large distributed processing on the Hadoop cluster.
+It provides automatic parallelization and job scheduling.
+Question 43. Explain The Function Of An Amazon Ec2 Instance Like Stopping, Starting
+And Terminating?
+
+Answer :
+
+Stopping and Starting an instance: When an instance is stopped, the instance
+performs a normal shutdown and then transitions to a stopped state. All of its
+Amazon EBS volumes remain attached, and you can start the instance again at a later
+time. You are not charged for additional instance hours while the instance is in a
+stopped state.
+
+Terminating an instance: When an instance is terminated, the instance performs a
+normal shutdown, and then the attached Amazon EBS volumes are deleted unless the
+volume�s delete On Termination attribute is set to false. The instance itself is
+also deleted, and you can�t start the instance again at a later time
+

@@ -1,0 +1,262 @@
+KUBERNETES NOTES
+=================================
+- provide methods for deployment maintenance and scalability of container based
+applications.
+- Components:
+      nodes
+      pods
+      labels
+      selectors
+      controllers
+      services
+      control pane
+      API
+
+Minions (Node)
+----------------
+Container clients
+Individual hosts with docker instealled (virtual or physical)
+Each minion runs ETCD (used by k8s for exchanign messages and reporting status)
+Runs kubernetes proxy
+
+Pods
+----------------
+consists of 1 or more containers
+guarenteed to be located on the same host machine
+Pods are assigned unique ips within each cluster. There enable avoidance of port
+conflicts
+can contain definitions of disk volumes
+management through API or delegated controllers
+
+Labels
+------------------
+Clients can attach key-value pairs to objects in the system.
+Allows use to identify objects for config or management
+
+Selectors
+----------------------
+Represnet queries made against labels
+They resolve to matching objects
+
+Controllers
+-------------------------
+Used in management of a cluster
+Enforces desired configruation state of your deployment
+(scaling replication, self-healing, etc.)
+
+Services
+--------------------------
+pods consist of one or more containers. Ensures that pods can work together
+Can provide service discovery and handle routing with the static IP for each pod
+
+
+YAML
+=========================
+---# <group name>
+- <value>
+- <value>
+
+SETUP
+======================
+install ntp (yum install -y ntp)
+vim /etc/hosts
+add ips and host names
+
+create kubernetes repo and do a yum update
+run the following:
+ yum install -y --enablerepo=virt7-docker-common-release kubernetes docker
+
+master configruation
+--------------------
+vim /etc/kubernetes/config
+set KUBE_MASTER from 127.0.0.1 to master name in /etc/hosts
+KUBE_MASTER="--master=http://master:8080"
+add: KUBE_ETCD_SERVER="--etcd-servers=http://master:2379"
+yum install etcd
+vim /etc/etcd/etcd.conf
+ETCD_LISTEN_CLIENT_URLS="http://0.0.0.0:2379"
+ETCD_ADVERTISE_CLIENT_URLS="http://0.0.0.0:2379"
+
+vim /etc/kubernetes/apiserver
+      # The address on the local server to listen to.
+      KUBE_API_ADDRESS="--address=0.0.0.0"
+
+     # The port on the local server to listen on.
+     KUBE_API_PORT="--port=8080"
+
+     # Port minions listen on
+     KUBELET_PORT="--kubelet-port=10250"
+
+     comment out kube admission control
+
+systemctl enable etcd kube-apiserver kube-controller-manager kube-scheduler
+systemctl start etcd kube-apiserver kube-controller-manager kube-scheduler
+systemctl status etcd kube-apiserver kube-controller-manager kube-scheduler | grep
+running
+
+minion configuration
+----------------------
+vim /etc/kubernetes/config
+
+     KUBE_ETCD_SERVER="--etcd-servers=http://master:2379"
+
+vim /etc/kubernetes/kubelet
+
+     KUBELET_ADDRESS="--address=0.0.0.0"
+
+     # The port for the info server to serve on
+     KUBELET_PORT="--port=10250"
+
+     # You may leave this blank to use the actual hostname
+     KUBELET_HOSTNAME="--hostname-override=minion-1"
+
+     # location of the api-server
+     KUBELET_API_SERVER="--api-servers=http://master:8080"
+
+systemctl enable kube-proxy kubelet docker
+systemctl status kube-proxy kubelet docker | grep running
+kubectl
+=========================
+man kubectl
+kubectl get nodes (man kubectl-get, gets info on nodes and registration state)
+kubectl describe nodes
+
+Configuration file on YAML
+==========================
+creating a pod
+---------------
+Create a <podname>.yaml file
+      apiVersion: v1
+      kind: Pod
+      metadata:
+       name: nginx
+      spec:
+       containers:
+       - name: nginx
+         image: nginx:1.7.9
+         ports:
+         - containerPort: 80
+
+kubectl create -f ./nginx.yaml (creates a pod)
+kubectl get pods (gets details)
+kubectl describe pods nginx (gets in depth details)
+
+kubectl run busybox --image=busybox   --tty -i(creates a buys box container and
+attaches to it)
+
+kubectl delete pod nginx (removes a pod and containers)
+kubectl port-forward -p nginx :80 & (port forwards to localhost from pod to random
+high port)
+
+Tags Labels and Selectors
+=============================
+Modify yaml to have a label:
+      apiVersion: v1
+      kind: Pod
+      metadata:
+       name: nginx
+       labels:
+        app: nginx
+      spec:
+       containers:
+       - name: nginx
+         image: nginx:1.7.9
+         ports:
+         - containerPort: 80
+kubectl get pods -l app=nginx (gets pods with label app = nginx)
+
+
+Deployment States
+===============================
+
+creating a deployment definition YAML:
+      apiVersion: extensions/v1beta1
+      kind: Deployment
+      metadata:
+       name: nginx-deployment-prod
+       replicas: 1
+       template:
+        metadata:
+         labels:
+            app: nginx-deployment-prod
+        spec:
+         containers:
+         - name: nginx-deployment-pod
+             image: nginx:1.7.9
+             ports:
+             - containerPort: 80
+kubectl apply -f ./nginx-deployment-dev-update.yaml (applies updates to groups of
+dev deployments)
+
+Multi-Pod deployment:
+=======================================
+Create a yaml definition for the multipod deployment:
+      apiVersion: v1
+      kind: ReplicationController
+      metadata:
+       name: nginx-www
+      spec:
+       replicas: 2
+       selector:
+        app: nginx
+       template:
+        metadata:
+         name: nginx
+         labels:
+            app: nginx
+        spec:
+         containers:
+         - names: nginx
+             image: nginx
+             ports:
+             - containerPort: 80
+kubectl create -f nginx-multi-label.yaml
+kubectl describe replicationcontroller nginx-www (shows pods on the different
+minions)
+kubectl get replicationcontroller
+kubectl delete replicationcontroller busybox
+
+Service Definitions:
+=========================
+Create service YAML definition:
+
+     apiVersion: v1
+     kind: Service
+     metadata:
+      name: nginx-service
+     spec:
+      ports:
+      - port: 8000
+        targetPort: 80
+        protocol: TCP
+      selector:
+       app: nginx
+
+kubectl create -f nginx-service.yaml
+kubectl get services
+
+run containers without definition file
+=====================================
+ kubectl run mysample --image=latest123/apache
+ kubectl run myreplicas --image=latest123/apache --replicas=2
+--labels=app=myapache,version=1.0
+
+interact with pods
+======================================
+kubectl exec <pod> <command>
+kubectl exec myreplicas-e48qt -i -t -- /bin/bash (connects to the bash)
+
+logs
+======================================
+ kubectl logs <pod>
+ kubectl logs --tail=1 myreplicas-e48qt
+ kubectl logs -f myreplicas-e48qt
+ kubectl logs -f -c <container id> <pod name>
+
+Autoscale
+=======================================
+kubectl autoscale deployment <deployment name> --min=2 --max=6
+kubectl autoscale deployment myautoscale --min=2 --max=6 --cpu-percent=80
+to update autoscale use:
+      kubectl scale --current-replicas=2 --replicas=4 deployment/myautoscale
+
